@@ -1,6 +1,7 @@
 import React from 'react';
+import AppComponent from './AppComponent';
 
-class Dashboard extends React.Component {
+class Dashboard extends AppComponent {
   render() {
     return(
       <h1>Dashboard!</h1>

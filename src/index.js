@@ -3,6 +3,10 @@ import ReactDOM from 'react-dom';
 import { Router, Route, IndexRoute, browserHistory } from 'react-router';
 import App from './App';
 
+// Auth
+import UserSignUp from './app/auth/UserSignUp';
+import UserSignIn from './app/auth/UserSignIn';
+
 // Landing page
 import Dashboard from './app/Dashboard';
 
@@ -24,13 +28,16 @@ import PageNotFound from './errors/PageNotFound';
 ReactDOM.render((
   <Router history={browserHistory}>
     <Route path="/" component={App}>
-      <IndexRoute component={Dashboard} />
+      <IndexRoute component={Dashboard}/>
       <Route path="/circles" component={Circles}/>
       <Route path="/circle/:circleId" component={Circle}/>
       <Route path="/meetings" component={Meetings}>
         <Route path="/meeting/tactical" component={Tactical}/>
         <Route path="/meeting/governance" component={Governance}/>
       </Route>
+
+      <Route path="/users/sign-up" component={UserSignUp}/>
+      <Route path="/users/sign-in" component={UserSignIn}/>
 
       <Route path="/about" component={About}/>
       <Route path="*" component={PageNotFound}/>

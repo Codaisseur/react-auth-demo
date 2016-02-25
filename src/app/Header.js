@@ -1,9 +1,12 @@
 import React from 'react';
+import Navigation from './header/Navigation';
 
 class Header extends React.Component {
   render() {
     return(
-      <header className="header">Header!</header>
+      <header className="header">
+        <Navigation />
+      </header>
     );
   }
 }
